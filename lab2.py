@@ -10,7 +10,11 @@
 # Create a class named Contact that represents a contact in a contact management system. 
 # This class should have an initialiser with attributes for name, phone_number, and email.
 # Add a class attribute to keep track of the total number of contacts.
-
+class Contact:
+    def __init__(self, name, phone_number, email):
+        self.name = name
+        self.phone_number = phone_number
+        self.email = email
 
 
 # Create at least two instances of the Contact class with different data.
