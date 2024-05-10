@@ -21,5 +21,7 @@ class Contact:
         self.email = email
         self.contact_number = contact_number
         Contact.number_contacts += 1
+   
     def check_email(self, email):
-        if self.email 
+        if "@" in self.email:
+            print(f"Email {self.contact_number} Contains @")
