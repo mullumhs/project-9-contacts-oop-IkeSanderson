@@ -19,11 +19,8 @@ class ContactManager:
         print(f"Added new contact: {name}")
 
     def display_contacts(self):
-        # TODO: Implement this method to print all contact details.
-        # You may choose to create a __str__ method in the Contact class or implement this method here.
-        pass # Then, remove this line.
         for contacts in self.contacts:
-            Contact.print_details(self)
+            print(contacts)
 
     # The parameter 'name' is used to identify the contact to update.
     # The parameters 'new_email' and 'new_phone' are optional and can be used to update the contact's email and phone.
@@ -50,5 +47,9 @@ class ContactManager:
                 print(f"Contact {name} has been removed.")
                 break
         print("Contact not found.")
+        
+CM = ContactManager()
+CM.add_contact("Bob",111,"Bob@mail")
+CM.add_contact("Rod",222,"Rod@mail")
+CM.display_contacts()
 
-ContactManager.display_contacts()
