@@ -13,10 +13,11 @@ class ContactManager:
         self.contacts = []
 
     # The parameters 'name', 'email', and 'phone' are used to create a new contact.
-    def add_contact(self, name, email, phone):
-        new_contact = Contact(name, email, phone)
+    def add_contact(self, name, phone, email) :
+        new_contact = Contact(name, phone, email)
         self.contacts.append(new_contact)
         print(f"Added new contact: {name}")
+        print()
 
     def display_contacts(self):
         for contacts in self.contacts:
@@ -46,10 +47,8 @@ class ContactManager:
                 self.contacts.remove(contact)
                 print(f"Contact {name} has been removed.")
                 break
-        print("Contact not found.")
+            
         
 CM = ContactManager()
-CM.add_contact("Bob",111,"Bob@mail")
-CM.add_contact("Rod",222,"Rod@mail")
-CM.display_contacts()
+
 
